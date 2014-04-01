@@ -12,15 +12,23 @@
 		BB61F8EF18EB4ABE0088E121 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F8EE18EB4ABE0088E121 /* UIKit.framework */; };
 		BB61F8F518EB4ABE0088E121 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB61F8F318EB4ABE0088E121 /* InfoPlist.strings */; };
 		BB61F8F718EB4ABE0088E121 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F8F618EB4ABE0088E121 /* main.m */; };
-		BB61F8FB18EB4ABE0088E121 /* MouseStacheAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F8FA18EB4ABE0088E121 /* MouseStacheAppDelegate.m */; };
-		BB61F8FE18EB4ABE0088E121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB61F8FC18EB4ABE0088E121 /* Main.storyboard */; };
-		BB61F90118EB4ABE0088E121 /* MouseStacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F90018EB4ABE0088E121 /* MouseStacheViewController.m */; };
-		BB61F90318EB4ABE0088E121 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB61F90218EB4ABE0088E121 /* Images.xcassets */; };
 		BB61F90A18EB4ABF0088E121 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F90918EB4ABF0088E121 /* XCTest.framework */; };
 		BB61F90B18EB4ABF0088E121 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F8EA18EB4ABE0088E121 /* Foundation.framework */; };
 		BB61F90C18EB4ABF0088E121 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F8EE18EB4ABE0088E121 /* UIKit.framework */; };
 		BB61F91418EB4ABF0088E121 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB61F91218EB4ABF0088E121 /* InfoPlist.strings */; };
 		BB61F91618EB4ABF0088E121 /* MouseStacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F91518EB4ABF0088E121 /* MouseStacheTests.m */; };
+		BB61F93818EB4E000088E121 /* AddMouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F92218EB4E000088E121 /* AddMouseViewController.m */; };
+		BB61F93918EB4E000088E121 /* AddRelationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F92418EB4E000088E121 /* AddRelationViewController.m */; };
+		BB61F93A18EB4E000088E121 /* AllMice.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F92618EB4E000088E121 /* AllMice.m */; };
+		BB61F93B18EB4E000088E121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB61F92818EB4E000088E121 /* Main.storyboard */; };
+		BB61F93C18EB4E000088E121 /* Cage.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F92B18EB4E000088E121 /* Cage.m */; };
+		BB61F93D18EB4E000088E121 /* CagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F92D18EB4E000088E121 /* CagesViewController.m */; };
+		BB61F93E18EB4E000088E121 /* MiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F92F18EB4E000088E121 /* MiceViewController.m */; };
+		BB61F93F18EB4E000088E121 /* Mouse.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F93118EB4E000088E121 /* Mouse.m */; };
+		BB61F94018EB4E000088E121 /* MouseStacheAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F93318EB4E000088E121 /* MouseStacheAppDelegate.m */; };
+		BB61F94118EB4E000088E121 /* ShowCageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F93518EB4E000088E121 /* ShowCageViewController.m */; };
+		BB61F94218EB4E000088E121 /* ShowMouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F93718EB4E000088E121 /* ShowMouseViewController.m */; };
+		BB61F94418EB4E640088E121 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB61F94318EB4E640088E121 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,17 +50,33 @@
 		BB61F8F418EB4ABE0088E121 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB61F8F618EB4ABE0088E121 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BB61F8F818EB4ABE0088E121 /* MouseStache-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MouseStache-Prefix.pch"; sourceTree = "<group>"; };
-		BB61F8F918EB4ABE0088E121 /* MouseStacheAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseStacheAppDelegate.h; sourceTree = "<group>"; };
-		BB61F8FA18EB4ABE0088E121 /* MouseStacheAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseStacheAppDelegate.m; sourceTree = "<group>"; };
-		BB61F8FD18EB4ABE0088E121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BB61F8FF18EB4ABE0088E121 /* MouseStacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseStacheViewController.h; sourceTree = "<group>"; };
-		BB61F90018EB4ABE0088E121 /* MouseStacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseStacheViewController.m; sourceTree = "<group>"; };
-		BB61F90218EB4ABE0088E121 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BB61F90818EB4ABF0088E121 /* MouseStacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MouseStacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB61F90918EB4ABF0088E121 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BB61F91118EB4ABF0088E121 /* MouseStacheTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MouseStacheTests-Info.plist"; sourceTree = "<group>"; };
 		BB61F91318EB4ABF0088E121 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB61F91518EB4ABF0088E121 /* MouseStacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseStacheTests.m; sourceTree = "<group>"; };
+		BB61F92118EB4E000088E121 /* AddMouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMouseViewController.h; sourceTree = "<group>"; };
+		BB61F92218EB4E000088E121 /* AddMouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMouseViewController.m; sourceTree = "<group>"; };
+		BB61F92318EB4E000088E121 /* AddRelationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRelationViewController.h; sourceTree = "<group>"; };
+		BB61F92418EB4E000088E121 /* AddRelationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRelationViewController.m; sourceTree = "<group>"; };
+		BB61F92518EB4E000088E121 /* AllMice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllMice.h; sourceTree = "<group>"; };
+		BB61F92618EB4E000088E121 /* AllMice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllMice.m; sourceTree = "<group>"; };
+		BB61F92918EB4E000088E121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		BB61F92A18EB4E000088E121 /* Cage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cage.h; sourceTree = "<group>"; };
+		BB61F92B18EB4E000088E121 /* Cage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cage.m; sourceTree = "<group>"; };
+		BB61F92C18EB4E000088E121 /* CagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CagesViewController.h; sourceTree = "<group>"; };
+		BB61F92D18EB4E000088E121 /* CagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CagesViewController.m; sourceTree = "<group>"; };
+		BB61F92E18EB4E000088E121 /* MiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiceViewController.h; sourceTree = "<group>"; };
+		BB61F92F18EB4E000088E121 /* MiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiceViewController.m; sourceTree = "<group>"; };
+		BB61F93018EB4E000088E121 /* Mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mouse.h; sourceTree = "<group>"; };
+		BB61F93118EB4E000088E121 /* Mouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mouse.m; sourceTree = "<group>"; };
+		BB61F93218EB4E000088E121 /* MouseStacheAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseStacheAppDelegate.h; sourceTree = "<group>"; };
+		BB61F93318EB4E000088E121 /* MouseStacheAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseStacheAppDelegate.m; sourceTree = "<group>"; };
+		BB61F93418EB4E000088E121 /* ShowCageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCageViewController.h; sourceTree = "<group>"; };
+		BB61F93518EB4E000088E121 /* ShowCageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCageViewController.m; sourceTree = "<group>"; };
+		BB61F93618EB4E000088E121 /* ShowMouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMouseViewController.h; sourceTree = "<group>"; };
+		BB61F93718EB4E000088E121 /* ShowMouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowMouseViewController.m; sourceTree = "<group>"; };
+		BB61F94318EB4E640088E121 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +136,28 @@
 		BB61F8F018EB4ABE0088E121 /* MouseStache */ = {
 			isa = PBXGroup;
 			children = (
-				BB61F8F918EB4ABE0088E121 /* MouseStacheAppDelegate.h */,
-				BB61F8FA18EB4ABE0088E121 /* MouseStacheAppDelegate.m */,
-				BB61F8FC18EB4ABE0088E121 /* Main.storyboard */,
-				BB61F8FF18EB4ABE0088E121 /* MouseStacheViewController.h */,
-				BB61F90018EB4ABE0088E121 /* MouseStacheViewController.m */,
-				BB61F90218EB4ABE0088E121 /* Images.xcassets */,
+				BB61F94318EB4E640088E121 /* Images.xcassets */,
+				BB61F92818EB4E000088E121 /* Main.storyboard */,
+				BB61F92118EB4E000088E121 /* AddMouseViewController.h */,
+				BB61F92218EB4E000088E121 /* AddMouseViewController.m */,
+				BB61F92318EB4E000088E121 /* AddRelationViewController.h */,
+				BB61F92418EB4E000088E121 /* AddRelationViewController.m */,
+				BB61F92518EB4E000088E121 /* AllMice.h */,
+				BB61F92618EB4E000088E121 /* AllMice.m */,
+				BB61F92A18EB4E000088E121 /* Cage.h */,
+				BB61F92B18EB4E000088E121 /* Cage.m */,
+				BB61F92C18EB4E000088E121 /* CagesViewController.h */,
+				BB61F92D18EB4E000088E121 /* CagesViewController.m */,
+				BB61F92E18EB4E000088E121 /* MiceViewController.h */,
+				BB61F92F18EB4E000088E121 /* MiceViewController.m */,
+				BB61F93018EB4E000088E121 /* Mouse.h */,
+				BB61F93118EB4E000088E121 /* Mouse.m */,
+				BB61F93218EB4E000088E121 /* MouseStacheAppDelegate.h */,
+				BB61F93318EB4E000088E121 /* MouseStacheAppDelegate.m */,
+				BB61F93418EB4E000088E121 /* ShowCageViewController.h */,
+				BB61F93518EB4E000088E121 /* ShowCageViewController.m */,
+				BB61F93618EB4E000088E121 /* ShowMouseViewController.h */,
+				BB61F93718EB4E000088E121 /* ShowMouseViewController.m */,
 				BB61F8F118EB4ABE0088E121 /* Supporting Files */,
 			);
 			path = MouseStache;
@@ -229,9 +269,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB61F90318EB4ABE0088E121 /* Images.xcassets in Resources */,
+				BB61F94418EB4E640088E121 /* Images.xcassets in Resources */,
 				BB61F8F518EB4ABE0088E121 /* InfoPlist.strings in Resources */,
-				BB61F8FE18EB4ABE0088E121 /* Main.storyboard in Resources */,
+				BB61F93B18EB4E000088E121 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +290,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB61F8FB18EB4ABE0088E121 /* MouseStacheAppDelegate.m in Sources */,
-				BB61F90118EB4ABE0088E121 /* MouseStacheViewController.m in Sources */,
+				BB61F93D18EB4E000088E121 /* CagesViewController.m in Sources */,
+				BB61F93C18EB4E000088E121 /* Cage.m in Sources */,
+				BB61F93818EB4E000088E121 /* AddMouseViewController.m in Sources */,
+				BB61F94118EB4E000088E121 /* ShowCageViewController.m in Sources */,
+				BB61F93F18EB4E000088E121 /* Mouse.m in Sources */,
 				BB61F8F718EB4ABE0088E121 /* main.m in Sources */,
+				BB61F93918EB4E000088E121 /* AddRelationViewController.m in Sources */,
+				BB61F94218EB4E000088E121 /* ShowMouseViewController.m in Sources */,
+				BB61F93E18EB4E000088E121 /* MiceViewController.m in Sources */,
+				BB61F94018EB4E000088E121 /* MouseStacheAppDelegate.m in Sources */,
+				BB61F93A18EB4E000088E121 /* AllMice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,20 +331,21 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		BB61F8FC18EB4ABE0088E121 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB61F8FD18EB4ABE0088E121 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BB61F91218EB4ABF0088E121 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BB61F91318EB4ABF0088E121 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BB61F92818EB4E000088E121 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB61F92918EB4E000088E121 /* Base */,
+			);
+			name = Main.storyboard;
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

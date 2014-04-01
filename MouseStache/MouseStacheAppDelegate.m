@@ -2,19 +2,59 @@
 //  MouseStacheAppDelegate.m
 //  MouseStache
 //
-//  Created by Danielle Bessler on 4/1/14.
+//  Created by Danielle Bessler on 2/9/14.
 //  Copyright (c) 2014 Danielle Bessler. All rights reserved.
 //
 
 #import "MouseStacheAppDelegate.h"
+#import "MiceViewController.h"
+#import "AllMice.h"
+#import "ShowCageViewController.h"
+#import "MiceViewController.h"
+#import "CagesViewController.h"
 
 @implementation MouseStacheAppDelegate
+{
+    AllMice *_mice;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+//    self.tabBarController = [[UITabBarController alloc] init];
+//    
+//    ShowCageViewController *cageVC = [[ShowCageViewController alloc] init];
+//    
+//    MiceViewController *miceVC = [[MiceViewController alloc] init];
+//    
+//    UINavigationController *miceNav = [[UINavigationController alloc] initWithRootViewController:miceVC];
+//    
+//    NSArray* controllers = [NSArray arrayWithObjects:cageVC, miceNav, nil, nil, nil];
+//    self.tabBarController.viewControllers = controllers;
+//    
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.rootViewController = self.tabBarController;
+//    [self.window makeKeyAndVisible];
+//
+    UITabBarController *tabController = (UITabBarController *)self.window.rootViewController;
+    UINavigationController *navMice = tabController.viewControllers[0];
+    UINavigationController *navCages = tabController.viewControllers[1];
+    
+    MiceViewController *miceVC = (MiceViewController *)navMice.topViewController;
+    CagesViewController *cagesVC = (CagesViewController *)navCages.topViewController;
+    
+    navMice.navigationBar.tintColor = [UIColor colorWithRed:101.0/255.0 green:44.0/255.0 blue:144.0/255.0 alpha:1.0];
+    navCages.navigationBar.tintColor = [UIColor colorWithRed:101.0/255.0 green:44.0/255.0 blue:144.0/255.0 alpha:1.0];
+   
+    _mice = [[AllMice alloc] init];
+    miceVC.mice = _mice;
+    cagesVC.mice = _mice;
+
+    sleep(2);
+    
     return YES;
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -22,10 +62,14 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
+- (void)saveData {
+    
+    [_mice saveMice];
+}
+
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self saveData];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -40,7 +84,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+   [self saveData];
 }
 
 @end
