@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB61F8EB18EB4ABE0088E121 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F8EA18EB4ABE0088E121 /* Foundation.framework */; };
+		BB61F8ED18EB4ABE0088E121 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F8EC18EB4ABE0088E121 /* CoreGraphics.framework */; };
+		BB61F8EF18EB4ABE0088E121 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F8EE18EB4ABE0088E121 /* UIKit.framework */; };
+		BB61F8F518EB4ABE0088E121 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB61F8F318EB4ABE0088E121 /* InfoPlist.strings */; };
+		BB61F8F718EB4ABE0088E121 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F8F618EB4ABE0088E121 /* main.m */; };
+		BB61F8FB18EB4ABE0088E121 /* MouseStacheAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F8FA18EB4ABE0088E121 /* MouseStacheAppDelegate.m */; };
+		BB61F8FE18EB4ABE0088E121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB61F8FC18EB4ABE0088E121 /* Main.storyboard */; };
+		BB61F90118EB4ABE0088E121 /* MouseStacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F90018EB4ABE0088E121 /* MouseStacheViewController.m */; };
+		BB61F90318EB4ABE0088E121 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB61F90218EB4ABE0088E121 /* Images.xcassets */; };
+		BB61F90A18EB4ABF0088E121 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F90918EB4ABF0088E121 /* XCTest.framework */; };
+		BB61F90B18EB4ABF0088E121 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F8EA18EB4ABE0088E121 /* Foundation.framework */; };
+		BB61F90C18EB4ABF0088E121 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB61F8EE18EB4ABE0088E121 /* UIKit.framework */; };
+		BB61F91418EB4ABF0088E121 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB61F91218EB4ABF0088E121 /* InfoPlist.strings */; };
+		BB61F91618EB4ABF0088E121 /* MouseStacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB61F91518EB4ABF0088E121 /* MouseStacheTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB61F90D18EB4ABF0088E121 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB61F8DF18EB4ABE0088E121 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB61F8E618EB4ABE0088E121;
+			remoteInfo = MouseStache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB61F8E718EB4ABE0088E121 /* MouseStache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MouseStache.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB61F8EA18EB4ABE0088E121 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BB61F8EC18EB4ABE0088E121 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BB61F8EE18EB4ABE0088E121 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BB61F8F218EB4ABE0088E121 /* MouseStache-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MouseStache-Info.plist"; sourceTree = "<group>"; };
+		BB61F8F418EB4ABE0088E121 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB61F8F618EB4ABE0088E121 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB61F8F818EB4ABE0088E121 /* MouseStache-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MouseStache-Prefix.pch"; sourceTree = "<group>"; };
+		BB61F8F918EB4ABE0088E121 /* MouseStacheAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseStacheAppDelegate.h; sourceTree = "<group>"; };
+		BB61F8FA18EB4ABE0088E121 /* MouseStacheAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseStacheAppDelegate.m; sourceTree = "<group>"; };
+		BB61F8FD18EB4ABE0088E121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB61F8FF18EB4ABE0088E121 /* MouseStacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseStacheViewController.h; sourceTree = "<group>"; };
+		BB61F90018EB4ABE0088E121 /* MouseStacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseStacheViewController.m; sourceTree = "<group>"; };
+		BB61F90218EB4ABE0088E121 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BB61F90818EB4ABF0088E121 /* MouseStacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MouseStacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB61F90918EB4ABF0088E121 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BB61F91118EB4ABF0088E121 /* MouseStacheTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MouseStacheTests-Info.plist"; sourceTree = "<group>"; };
+		BB61F91318EB4ABF0088E121 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB61F91518EB4ABF0088E121 /* MouseStacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MouseStacheTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB61F8E418EB4ABE0088E121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB61F8ED18EB4ABE0088E121 /* CoreGraphics.framework in Frameworks */,
+				BB61F8EF18EB4ABE0088E121 /* UIKit.framework in Frameworks */,
+				BB61F8EB18EB4ABE0088E121 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB61F90518EB4ABF0088E121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB61F90A18EB4ABF0088E121 /* XCTest.framework in Frameworks */,
+				BB61F90C18EB4ABF0088E121 /* UIKit.framework in Frameworks */,
+				BB61F90B18EB4ABF0088E121 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB61F8DE18EB4ABE0088E121 = {
+			isa = PBXGroup;
+			children = (
+				BB61F8F018EB4ABE0088E121 /* MouseStache */,
+				BB61F90F18EB4ABF0088E121 /* MouseStacheTests */,
+				BB61F8E918EB4ABE0088E121 /* Frameworks */,
+				BB61F8E818EB4ABE0088E121 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB61F8E818EB4ABE0088E121 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB61F8E718EB4ABE0088E121 /* MouseStache.app */,
+				BB61F90818EB4ABF0088E121 /* MouseStacheTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB61F8E918EB4ABE0088E121 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB61F8EA18EB4ABE0088E121 /* Foundation.framework */,
+				BB61F8EC18EB4ABE0088E121 /* CoreGraphics.framework */,
+				BB61F8EE18EB4ABE0088E121 /* UIKit.framework */,
+				BB61F90918EB4ABF0088E121 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB61F8F018EB4ABE0088E121 /* MouseStache */ = {
+			isa = PBXGroup;
+			children = (
+				BB61F8F918EB4ABE0088E121 /* MouseStacheAppDelegate.h */,
+				BB61F8FA18EB4ABE0088E121 /* MouseStacheAppDelegate.m */,
+				BB61F8FC18EB4ABE0088E121 /* Main.storyboard */,
+				BB61F8FF18EB4ABE0088E121 /* MouseStacheViewController.h */,
+				BB61F90018EB4ABE0088E121 /* MouseStacheViewController.m */,
+				BB61F90218EB4ABE0088E121 /* Images.xcassets */,
+				BB61F8F118EB4ABE0088E121 /* Supporting Files */,
+			);
+			path = MouseStache;
+			sourceTree = "<group>";
+		};
+		BB61F8F118EB4ABE0088E121 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB61F8F218EB4ABE0088E121 /* MouseStache-Info.plist */,
+				BB61F8F318EB4ABE0088E121 /* InfoPlist.strings */,
+				BB61F8F618EB4ABE0088E121 /* main.m */,
+				BB61F8F818EB4ABE0088E121 /* MouseStache-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB61F90F18EB4ABF0088E121 /* MouseStacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB61F91518EB4ABF0088E121 /* MouseStacheTests.m */,
+				BB61F91018EB4ABF0088E121 /* Supporting Files */,
+			);
+			path = MouseStacheTests;
+			sourceTree = "<group>";
+		};
+		BB61F91018EB4ABF0088E121 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB61F91118EB4ABF0088E121 /* MouseStacheTests-Info.plist */,
+				BB61F91218EB4ABF0088E121 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB61F8E618EB4ABE0088E121 /* MouseStache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB61F91918EB4ABF0088E121 /* Build configuration list for PBXNativeTarget "MouseStache" */;
+			buildPhases = (
+				BB61F8E318EB4ABE0088E121 /* Sources */,
+				BB61F8E418EB4ABE0088E121 /* Frameworks */,
+				BB61F8E518EB4ABE0088E121 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MouseStache;
+			productName = MouseStache;
+			productReference = BB61F8E718EB4ABE0088E121 /* MouseStache.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB61F90718EB4ABF0088E121 /* MouseStacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB61F91C18EB4ABF0088E121 /* Build configuration list for PBXNativeTarget "MouseStacheTests" */;
+			buildPhases = (
+				BB61F90418EB4ABF0088E121 /* Sources */,
+				BB61F90518EB4ABF0088E121 /* Frameworks */,
+				BB61F90618EB4ABF0088E121 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB61F90E18EB4ABF0088E121 /* PBXTargetDependency */,
+			);
+			name = MouseStacheTests;
+			productName = MouseStacheTests;
+			productReference = BB61F90818EB4ABF0088E121 /* MouseStacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB61F8DF18EB4ABE0088E121 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MouseStache;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Danielle Bessler";
+				TargetAttributes = {
+					BB61F90718EB4ABF0088E121 = {
+						TestTargetID = BB61F8E618EB4ABE0088E121;
+					};
+				};
+			};
+			buildConfigurationList = BB61F8E218EB4ABE0088E121 /* Build configuration list for PBXProject "MouseStache" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB61F8DE18EB4ABE0088E121;
+			productRefGroup = BB61F8E818EB4ABE0088E121 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB61F8E618EB4ABE0088E121 /* MouseStache */,
+				BB61F90718EB4ABF0088E121 /* MouseStacheTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB61F8E518EB4ABE0088E121 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB61F90318EB4ABE0088E121 /* Images.xcassets in Resources */,
+				BB61F8F518EB4ABE0088E121 /* InfoPlist.strings in Resources */,
+				BB61F8FE18EB4ABE0088E121 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB61F90618EB4ABF0088E121 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB61F91418EB4ABF0088E121 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB61F8E318EB4ABE0088E121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB61F8FB18EB4ABE0088E121 /* MouseStacheAppDelegate.m in Sources */,
+				BB61F90118EB4ABE0088E121 /* MouseStacheViewController.m in Sources */,
+				BB61F8F718EB4ABE0088E121 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB61F90418EB4ABF0088E121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB61F91618EB4ABF0088E121 /* MouseStacheTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB61F90E18EB4ABF0088E121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB61F8E618EB4ABE0088E121 /* MouseStache */;
+			targetProxy = BB61F90D18EB4ABF0088E121 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB61F8F318EB4ABE0088E121 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB61F8F418EB4ABE0088E121 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BB61F8FC18EB4ABE0088E121 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB61F8FD18EB4ABE0088E121 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB61F91218EB4ABF0088E121 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB61F91318EB4ABF0088E121 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB61F91718EB4ABF0088E121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		BB61F91818EB4ABF0088E121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB61F91A18EB4ABF0088E121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MouseStache/MouseStache-Prefix.pch";
+				INFOPLIST_FILE = "MouseStache/MouseStache-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BB61F91B18EB4ABF0088E121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MouseStache/MouseStache-Prefix.pch";
+				INFOPLIST_FILE = "MouseStache/MouseStache-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BB61F91D18EB4ABF0088E121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MouseStache.app/MouseStache";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MouseStache/MouseStache-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MouseStacheTests/MouseStacheTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BB61F91E18EB4ABF0088E121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MouseStache.app/MouseStache";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MouseStache/MouseStache-Prefix.pch";
+				INFOPLIST_FILE = "MouseStacheTests/MouseStacheTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB61F8E218EB4ABE0088E121 /* Build configuration list for PBXProject "MouseStache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB61F91718EB4ABF0088E121 /* Debug */,
+				BB61F91818EB4ABF0088E121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB61F91918EB4ABF0088E121 /* Build configuration list for PBXNativeTarget "MouseStache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB61F91A18EB4ABF0088E121 /* Debug */,
+				BB61F91B18EB4ABF0088E121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB61F91C18EB4ABF0088E121 /* Build configuration list for PBXNativeTarget "MouseStacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB61F91D18EB4ABF0088E121 /* Debug */,
+				BB61F91E18EB4ABF0088E121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB61F8DF18EB4ABE0088E121 /* Project object */;
+}
