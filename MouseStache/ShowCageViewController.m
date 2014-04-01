@@ -89,6 +89,7 @@
         cell.imageView.image = [UIImage imageNamed:@"Male.png"];
     }
 
+    cell.userInteractionEnabled = NO;
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

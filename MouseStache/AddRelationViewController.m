@@ -14,8 +14,6 @@
 
 @interface AddRelationViewController ()
 
-
-
 @end
 
 @implementation AddRelationViewController

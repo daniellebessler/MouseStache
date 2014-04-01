@@ -136,28 +136,10 @@
 		BB61F8F018EB4ABE0088E121 /* MouseStache */ = {
 			isa = PBXGroup;
 			children = (
-				BB61F94318EB4E640088E121 /* Images.xcassets */,
 				BB61F92818EB4E000088E121 /* Main.storyboard */,
-				BB61F92118EB4E000088E121 /* AddMouseViewController.h */,
-				BB61F92218EB4E000088E121 /* AddMouseViewController.m */,
-				BB61F92318EB4E000088E121 /* AddRelationViewController.h */,
-				BB61F92418EB4E000088E121 /* AddRelationViewController.m */,
-				BB61F92518EB4E000088E121 /* AllMice.h */,
-				BB61F92618EB4E000088E121 /* AllMice.m */,
-				BB61F92A18EB4E000088E121 /* Cage.h */,
-				BB61F92B18EB4E000088E121 /* Cage.m */,
-				BB61F92C18EB4E000088E121 /* CagesViewController.h */,
-				BB61F92D18EB4E000088E121 /* CagesViewController.m */,
-				BB61F92E18EB4E000088E121 /* MiceViewController.h */,
-				BB61F92F18EB4E000088E121 /* MiceViewController.m */,
-				BB61F93018EB4E000088E121 /* Mouse.h */,
-				BB61F93118EB4E000088E121 /* Mouse.m */,
-				BB61F93218EB4E000088E121 /* MouseStacheAppDelegate.h */,
-				BB61F93318EB4E000088E121 /* MouseStacheAppDelegate.m */,
-				BB61F93418EB4E000088E121 /* ShowCageViewController.h */,
-				BB61F93518EB4E000088E121 /* ShowCageViewController.m */,
-				BB61F93618EB4E000088E121 /* ShowMouseViewController.h */,
-				BB61F93718EB4E000088E121 /* ShowMouseViewController.m */,
+				BB61F94318EB4E640088E121 /* Images.xcassets */,
+				BB61F94518EB5B360088E121 /* View Controllers */,
+				BB61F94618EB5B5C0088E121 /* Date Source */,
 				BB61F8F118EB4ABE0088E121 /* Supporting Files */,
 			);
 			path = MouseStache;
@@ -190,6 +172,40 @@
 				BB61F91218EB4ABF0088E121 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB61F94518EB5B360088E121 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB61F92118EB4E000088E121 /* AddMouseViewController.h */,
+				BB61F92218EB4E000088E121 /* AddMouseViewController.m */,
+				BB61F92318EB4E000088E121 /* AddRelationViewController.h */,
+				BB61F92418EB4E000088E121 /* AddRelationViewController.m */,
+				BB61F92C18EB4E000088E121 /* CagesViewController.h */,
+				BB61F92D18EB4E000088E121 /* CagesViewController.m */,
+				BB61F92E18EB4E000088E121 /* MiceViewController.h */,
+				BB61F92F18EB4E000088E121 /* MiceViewController.m */,
+				BB61F93218EB4E000088E121 /* MouseStacheAppDelegate.h */,
+				BB61F93318EB4E000088E121 /* MouseStacheAppDelegate.m */,
+				BB61F93418EB4E000088E121 /* ShowCageViewController.h */,
+				BB61F93518EB4E000088E121 /* ShowCageViewController.m */,
+				BB61F93618EB4E000088E121 /* ShowMouseViewController.h */,
+				BB61F93718EB4E000088E121 /* ShowMouseViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BB61F94618EB5B5C0088E121 /* Date Source */ = {
+			isa = PBXGroup;
+			children = (
+				BB61F92518EB4E000088E121 /* AllMice.h */,
+				BB61F92618EB4E000088E121 /* AllMice.m */,
+				BB61F92A18EB4E000088E121 /* Cage.h */,
+				BB61F92B18EB4E000088E121 /* Cage.m */,
+				BB61F93018EB4E000088E121 /* Mouse.h */,
+				BB61F93118EB4E000088E121 /* Mouse.m */,
+			);
+			name = "Date Source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
