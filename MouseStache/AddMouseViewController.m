@@ -66,7 +66,7 @@
     
     //Create label
 	dateLabel = [[UILabel alloc] init];
-	dateLabel.frame = CGRectMake(10, 10, 300, 40);
+	dateLabel.frame = CGRectMake(270, 10, 250, 60);
 	
 	
 	//Use NSDateFormatter to write out the date in a friendly format
@@ -75,7 +75,7 @@
 	dateLabel.text = [df stringFromDate:[NSDate date]];
     
     UIView *footerContainer = [[UIView alloc]initWithFrame:CGRectMake(10, 10, 300, 500)];
-    datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(10, 60, 250, 250)];
+    datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(250, 60, 250, 250)];
     datePicker.datePickerMode = UIDatePickerModeDate;
     
     [footerContainer addSubview:dateLabel];
