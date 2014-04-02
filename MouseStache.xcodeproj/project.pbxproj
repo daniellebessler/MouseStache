@@ -138,6 +138,8 @@
 			children = (
 				BB61F92818EB4E000088E121 /* Main.storyboard */,
 				BB61F94318EB4E640088E121 /* Images.xcassets */,
+				BB61F93218EB4E000088E121 /* MouseStacheAppDelegate.h */,
+				BB61F93318EB4E000088E121 /* MouseStacheAppDelegate.m */,
 				BB61F94518EB5B360088E121 /* View Controllers */,
 				BB61F94618EB5B5C0088E121 /* Date Source */,
 				BB61F8F118EB4ABE0088E121 /* Supporting Files */,
@@ -185,8 +187,6 @@
 				BB61F92D18EB4E000088E121 /* CagesViewController.m */,
 				BB61F92E18EB4E000088E121 /* MiceViewController.h */,
 				BB61F92F18EB4E000088E121 /* MiceViewController.m */,
-				BB61F93218EB4E000088E121 /* MouseStacheAppDelegate.h */,
-				BB61F93318EB4E000088E121 /* MouseStacheAppDelegate.m */,
 				BB61F93418EB4E000088E121 /* ShowCageViewController.h */,
 				BB61F93518EB4E000088E121 /* ShowCageViewController.m */,
 				BB61F93618EB4E000088E121 /* ShowMouseViewController.h */,

@@ -110,10 +110,11 @@
             
             [label setFrame:CGRectMake(0, 40, tableView.bounds.size.width, 20)];
             [label setFont:[UIFont boldSystemFontOfSize:20]];
-            label.text = @"Press and hold to add a cage";
+            label.text = @"Touch and hold to add a cage";
             label.textAlignment = NSTextAlignmentCenter;
             label.textColor = [UIColor colorWithRed:101.0/255.0 green:44.0/255.0 blue:144.0/255.0 alpha:1.0];	UILongPressGestureRecognizer *longPressGesture =[[UILongPressGestureRecognizer alloc]
                                                           initWithTarget:self action:@selector(longPress:)];
+            longPressGesture.minimumPressDuration = .5;
             [self.tableView addGestureRecognizer:longPressGesture];
             cell=addCageCell;
         }else{

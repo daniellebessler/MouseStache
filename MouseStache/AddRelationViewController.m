@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.title = @"Choose a Mouse";
+    self.title = @"Select a Mouse";
 }
 
 - (void) viewWillAppear:(BOOL)animated
