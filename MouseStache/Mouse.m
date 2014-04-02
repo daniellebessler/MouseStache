@@ -49,7 +49,7 @@
         self.parentFemale = [aDecoder decodeObjectForKey:@"parentFemale"];
         self.parentMale = [aDecoder decodeObjectForKey:@"parentMale"];
         self.children = [aDecoder decodeObjectForKey:@"Children"];
-        self.mates = [aDecoder decodeObjectForKey:@"Mates"];
+        //self.mates = [aDecoder decodeObjectForKey:@"Mates"];
         self.genes = [aDecoder decodeObjectForKey:@"Genes"];
         self.cage = [aDecoder decodeObjectForKey:@"Cage"];
         self.dateOfBirth = [aDecoder decodeObjectForKey:@"DOB"];
@@ -65,7 +65,7 @@
     [aCoder encodeObject:self.parentFemale forKey:@"parentFemale"];
     [aCoder encodeObject:self.parentMale forKey:@"parentMale"];
     [aCoder encodeObject:self.children forKey:@"Children"];
-    [aCoder encodeObject:self.mates forKey:@"Mates"];
+    //[aCoder encodeObject:self.mates forKey:@"Mates"];
     [aCoder encodeObject:self.genes forKey:@"Genes"];
     [aCoder encodeObject:self.cage forKey:@"Cage"];
     [aCoder encodeObject:self.dateOfBirth forKey:@"DOB"];

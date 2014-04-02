@@ -150,42 +150,47 @@
         self.mouse.name = field.text;
         
         //If either parent has changed, remove this mouse from that changed parent's children array.
+        //And add this mouse to new parent's children array.
         
-        Boolean changed = NO;
+        //Boolean changed = NO;
         if (_originalMom != self.mouse.parentFemale )
         {
             
             [_originalMom.children removeObjectIdenticalTo:self.mouse];
-            changed = YES;
+            Mouse *mom = self.mouse.parentFemale;
+            [mom.children addObject:self.mouse];
+            //changed = YES;
         }
         
         
         if (_originalDad != self.mouse.parentMale)
         {
-            [_originalMom.children removeObjectIdenticalTo:self.mouse];
-            changed = YES;
+            [_originalDad.children removeObjectIdenticalTo:self.mouse];
+            Mouse *dad = self.mouse.parentMale;
+            [dad.children addObject:self.mouse];
+            //changed = YES;
         }
 
         //If either parent has changed, and there is no other mouse that has the original two parents as parents, remove
         //each parent from the other's mates array.
 
-        if (changed)
-        {
-            Boolean found  = NO;
-            
-            for (int i=0; i<[_originalMom.children count]; i++) {
-            
-                Mouse *child = _originalMom.children[i];
-            
-                if (child.parentMale == _originalDad)
-                found = YES;
-            }
-        
-            if (!found) {
-                [_originalDad.mates removeObjectIdenticalTo:_originalMom];
-                [_originalMom.mates removeObjectIdenticalTo:_originalDad];
-            }
-        }
+//        if (changed)
+//        {
+//            Boolean found  = NO;
+//            
+//            for (int i=0; i<[_originalMom.children count]; i++) {
+//            
+//                Mouse *child = _originalMom.children[i];
+//            
+//                if (child.parentMale == _originalDad)
+//                found = YES;
+//            }
+//        
+//            if (!found) {
+//                [_originalDad.mates removeObjectIdenticalTo:_originalMom];
+//                [_originalMom.mates removeObjectIdenticalTo:_originalDad];
+//            }
+//        }
         
         
             [self.delegate AddMouseViewController:self didFinishEditingItem:self.mouse];

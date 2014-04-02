@@ -126,7 +126,7 @@
 {
     item.cage = [[Cage alloc] init];
     [self.mice.items addObject:item];
-    [self addRelationsWithMouse:item];
+    //[self addRelationsWithMouse:item];
     [self.mice sortMice];
     [self.tableView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -136,73 +136,73 @@
 - (void)AddMouseViewController:(AddMouseViewController *)controller didFinishEditingItem:(Mouse *)item
 {
     
-    [self addRelationsWithMouse:item];
+    //[self addRelationsWithMouse:item];
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
--(void)addRelationsWithMouse:(Mouse *)item
-{
+//-(void)addRelationsWithMouse:(Mouse *)item
+//{
+//
+//    //Add mouse to both parents' children arrays.
+//    if (item.parentMale!= nil)
+//    {
+//        NSInteger indexM = [item.parentMale.children count];
+//        item.parentMale.children[indexM] = item;
+//    }
+//    
+//    if (item.parentFemale!= nil)
+//    {
+//        NSInteger indexF = [item.parentFemale.children count];
+//        item.parentFemale.children[indexF] = item;
+//    }
 
-    //Add mouse to both parents' children arrays.
-    if (item.parentMale!= nil)
-    {
-        NSInteger indexM = [item.parentMale.children count];
-        item.parentMale.children[indexM] = item;
-    }
-    
-    if (item.parentFemale!= nil)
-    {
-        NSInteger indexF = [item.parentFemale.children count];
-        item.parentFemale.children[indexF] = item;
-    }
-    
-    Boolean found  = NO;
+//    Boolean found  = NO;
     //Add parents to each other's mate arrays, if not already there.
-    if (item.parentMale != nil && item.parentFemale != nil) {
-        
-        
+//    if (item.parentMale != nil && item.parentFemale != nil) {
+//        
+//        
+//    
+//        for (int i=0; i<[item.parentFemale.mates count]; i++) {
+//        
+//            if (item.parentFemale.mates[i] == item.parentMale)
+//            found = YES;
+//        }
+//    
+//        if (!found)
+//            [item.parentFemale.mates addObject:item.parentMale];
+//    
+//    
+//        found  = NO;
+//    
+//        for (int i=0; i<[item.parentMale.mates count]; i++) {
+//        
+//            if (item.parentMale.mates[i] == item.parentFemale)
+//            found = YES;
+//        }
+//    
+//        if (!found)
+//            [item.parentMale.mates addObject:item.parentFemale];
+//    }
+//    
+//    //Add mouse to each mate's mate arrays, if not already there.
+//    found = NO;
+//    
+//    for (int i=0; i<[item.mates count]; i++) {
+//        Mouse *mate = item.mates[i];
+//        for (int j=0; j<[mate.mates count]; j++) {
+//            if (item == mate.mates[j])
+//                found = YES;
+//        }
+//        if (!found)
+//            [mate.mates addObject:item];
+//    }
     
-        for (int i=0; i<[item.parentFemale.mates count]; i++) {
-        
-            if (item.parentFemale.mates[i] == item.parentMale)
-            found = YES;
-        }
-    
-        if (!found)
-            [item.parentFemale.mates addObject:item.parentMale];
-    
-    
-        found  = NO;
-    
-        for (int i=0; i<[item.parentMale.mates count]; i++) {
-        
-            if (item.parentMale.mates[i] == item.parentFemale)
-            found = YES;
-        }
-    
-        if (!found)
-            [item.parentMale.mates addObject:item.parentFemale];
-    }
-    
-    //Add mouse to each mate's mate arrays, if not already there.
-    found = NO;
-    
-    for (int i=0; i<[item.mates count]; i++) {
-        Mouse *mate = item.mates[i];
-        for (int j=0; j<[mate.mates count]; j++) {
-            if (item == mate.mates[j])
-                found = YES;
-        }
-        if (!found)
-            [mate.mates addObject:item];
-    }
-    
-    [self.mice sortMice];
-    [self.tableView reloadData];
-
-    
-}
+//    [self.mice sortMice];
+//    [self.tableView reloadData];
+//
+//    
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
