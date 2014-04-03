@@ -312,8 +312,8 @@ replacementString:(NSString *)string
         }else{
             addGene.hidden = YES;
             NSString *gene;
-            int row = indexPath.row;
-            gene = self.mouse.genes[row];
+            //int row = indexPath.row;
+            gene = self.mouse.genes[indexPath.row];
             field.text = gene;
         }
     }else if(indexPath.section == 1) {
@@ -325,6 +325,7 @@ replacementString:(NSString *)string
                 
            
             UILabel *label = (UILabel *)[cell viewWithTag:2999];
+            label.textColor = [UIColor blackColor];
             label.text = self.mouse.parentFemale.name;
             
             
@@ -333,6 +334,7 @@ replacementString:(NSString *)string
             }
             else {
                 UILabel *label = (UILabel *)[cell viewWithTag:2999];
+                label.textColor = [UIColor grayColor];
                 label.text = @"Mother";
             }
             
@@ -345,6 +347,7 @@ replacementString:(NSString *)string
             {
                 
                 UILabel *label = (UILabel *)[cell viewWithTag:3000];
+                label.textColor = [UIColor blackColor];
                 label.text = self.mouse.parentMale.name;
                 
                 
@@ -354,6 +357,7 @@ replacementString:(NSString *)string
             }
             else {
                 UILabel *label = (UILabel *)[cell viewWithTag:3000];
+                label.textColor = [UIColor grayColor];
                 label.text = @"Father";
             }
     }

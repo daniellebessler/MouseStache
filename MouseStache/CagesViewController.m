@@ -123,7 +123,9 @@
             [textField setFrame:CGRectMake(20, 40, 200, 20)];
             textField.placeholder = @"Enter Cage ID here";
             textField.adjustsFontSizeToFitWidth = YES;
-            
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+            [self.tableView addGestureRecognizer:tapGesture];
+            tapGesture.cancelsTouchesInView = NO;
         
         
             UIButton *add = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -164,7 +166,13 @@
 {
     return 100;
 }
-
+- (void) hideKeyboard {
+    [self.view endEditing:NO];
+    addMode=NO;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[cages count] inSection:0];
+    NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:NO];
+}
 
 -(void)addButtonHit:(id)sender
 {

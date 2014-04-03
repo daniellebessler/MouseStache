@@ -36,7 +36,11 @@
 //    self.window.rootViewController = self.tabBarController;
 //    [self.window makeKeyAndVisible];
 //
+    
+  
+    
     UITabBarController *tabController = (UITabBarController *)self.window.rootViewController;
+    tabController.tabBar.tintColor = [UIColor colorWithRed:101.0/255.0 green:44.0/255.0 blue:144.0/255.0 alpha:1.0];
     UINavigationController *navMice = tabController.viewControllers[0];
     UINavigationController *navCages = tabController.viewControllers[1];
     
