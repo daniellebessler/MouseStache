@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>867B9E25-6566-4D39-AFCE-D67CE7590538</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MouseStache</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2AF89263-38D3-48FB-B319-C2551C5C219F</key>
+		<string>https://github.com/daniellebessler/MouseStache.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MouseStache.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2AF89263-38D3-48FB-B319-C2551C5C219F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/daniellebessler/MouseStache.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2AF89263-38D3-48FB-B319-C2551C5C219F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2AF89263-38D3-48FB-B319-C2551C5C219F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MouseStache</string>
+		</dict>
+	</array>
+</dict>
+</plist>

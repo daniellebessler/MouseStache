@@ -192,13 +192,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Mouse" id="xME-e2-qqR">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="lKt-ZC-J2t">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lKt-ZC-J2t">
                             <color key="tintColor" red="0.396078431372549" green="0.17254901960784313" blue="0.56470588235294117" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
                                 <action selector="cancel" destination="r6G-iH-tYt" id="0LV-7v-uZ0"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="plain" systemItem="done" id="xb6-3L-aAU">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="xb6-3L-aAU">
                             <color key="tintColor" red="0.396078431372549" green="0.17254901960784313" blue="0.56470588235294117" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
                                 <action selector="done" destination="r6G-iH-tYt" id="Puk-XJ-QCx"/>
