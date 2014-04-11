@@ -9,6 +9,12 @@
 #import "AllMice.h"
 #import "Mouse.h"
 
+@interface AllMice ()
+
+@property (nonatomic, strong) dispatch_queue_t saveQueue;
+
+@end
+
 @implementation AllMice
 
 - (id) init
@@ -17,6 +23,9 @@
 
         
         [self loadMice];
+         NSLog(@"Data file path is %@", [self dataFilePath]);
+        
+        self.saveQueue = dispatch_queue_create("mouseStache.save.queue", DISPATCH_QUEUE_SERIAL);
         
     }
     return self;
@@ -26,16 +35,22 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths firstObject];
     return documentsDirectory;
+    
 }
 - (NSString *)dataFilePath {
     return [[self documentsDirectory] stringByAppendingPathComponent:@"MouseStache.plist"];
+   
 }
+
 - (void)saveMice {
-    NSMutableData *data = [[NSMutableData alloc] init];
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    [archiver encodeObject:self.items forKey:@"MouseStache"];
-    [archiver finishEncoding];
-    [data writeToFile:[self dataFilePath] atomically:YES];
+    
+    dispatch_async(self.saveQueue, ^{
+        NSMutableData *data = [[NSMutableData alloc] init];
+        NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+        [archiver encodeObject:self.items forKey:@"MouseStache"];
+        [archiver finishEncoding];
+        [data writeToFile:[self dataFilePath] atomically:YES];
+    });
 }
 
 - (void)loadMice {

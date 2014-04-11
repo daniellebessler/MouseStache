@@ -123,7 +123,9 @@
 {
     
     item.cage = self.cage;
+    [self.allMice saveMice];
     [_myMice addObject:item];
+    
     
     [self.tableView reloadData];
     

@@ -127,9 +127,10 @@
 {
     item.cage = [[Cage alloc] init];
     [self.mice.items addObject:item];
-    //[self addRelationsWithMouse:item];
+    
     [self.mice sortMice];
     [self.tableView reloadData];
+    [self.mice saveMice];
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
