@@ -64,12 +64,12 @@
         self.mouse = [[Mouse alloc] init];
     }
     
-    //Create label
+   
 	dateLabel = [[UILabel alloc] init];
 	dateLabel.frame = CGRectMake(270, 10, 250, 60);
 	
 	
-	//Use NSDateFormatter to write out the date in a friendly format
+	
 	NSDateFormatter *df = [[NSDateFormatter alloc] init];
 	df.dateStyle = NSDateFormatterMediumStyle;
 	dateLabel.text = [df stringFromDate:[NSDate date]];
@@ -148,11 +148,7 @@
     if(self.editMouse) {
         UITextField *field = (UITextField *)[self.tableView viewWithTag:2990];
         self.mouse.name = field.text;
-        
-        //If either parent has changed, remove this mouse from that changed parent's children array.
-        //And add this mouse to new parent's children array.
-        
-        //Boolean changed = NO;
+
         if (_originalMom != self.mouse.parentFemale )
         {
             
@@ -170,27 +166,6 @@
             [dad.children addObject:self.mouse];
             //changed = YES;
         }
-
-        //If either parent has changed, and there is no other mouse that has the original two parents as parents, remove
-        //each parent from the other's mates array.
-
-//        if (changed)
-//        {
-//            Boolean found  = NO;
-//            
-//            for (int i=0; i<[_originalMom.children count]; i++) {
-//            
-//                Mouse *child = _originalMom.children[i];
-//            
-//                if (child.parentMale == _originalDad)
-//                found = YES;
-//            }
-//        
-//            if (!found) {
-//                [_originalDad.mates removeObjectIdenticalTo:_originalMom];
-//                [_originalMom.mates removeObjectIdenticalTo:_originalDad];
-//            }
-//        }
         
         
             [self.delegate AddMouseViewController:self didFinishEditingItem:self.mouse];
@@ -199,8 +174,10 @@
     
         UITextField *field = (UITextField *)[self.tableView viewWithTag:2990];
         self.mouse.name = field.text;
-     
-     
+        Mouse *mom = self.mouse.parentFemale;
+        [mom.children addObject:self.mouse];
+        Mouse *dad = self.mouse.parentMale;
+        [dad.children addObject:self.mouse];
        
         
         
