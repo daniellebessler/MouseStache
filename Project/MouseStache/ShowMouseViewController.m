@@ -9,6 +9,7 @@
 #import "ShowMouseViewController.h"
 #import "Mouse.h"
 #import "Cage.h"
+#import "MiceViewController.h"
 
 @interface ShowMouseViewController ()
 
@@ -36,7 +37,11 @@
     
     UIView *footerContainer = [[UIView alloc]initWithFrame:CGRectMake(10, 10, 150, 50)];
     UIButton *btnFooter = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    
+    //if (self.navigationController.topViewController == MiceViewController) {
     [btnFooter setTitle:@"View All Mice" forState:UIControlStateNormal];
+    
     [btnFooter.titleLabel setFont:[UIFont boldSystemFontOfSize:22]];
     [btnFooter setFrame:CGRectMake(10, 10, 150, 50)];
     [btnFooter setTitleColor:[UIColor colorWithRed:101.0/255.0 green:44.0/255.0 blue:144.0/255.0 alpha:1.0] forState:UIControlStateNormal];
@@ -56,20 +61,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
-
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-  //  return 2;
-//}
-
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-   // return 0;
-//}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -146,10 +137,10 @@
     
     else if(indexPath.section==1) {
         if(indexPath.row ==0){
-        cell = [tableView dequeueReusableCellWithIdentifier:@"ParentCell"];
+            cell = [tableView dequeueReusableCellWithIdentifier:@"ParentCell"];
         
-       Mouse *item = self.mouse.parentFemale;
-        UILabel *label = (UILabel *)[cell viewWithTag:2000];
+            Mouse *item = self.mouse.parentFemale;
+            UILabel *label = (UILabel *)[cell viewWithTag:2000];
             
             if (self.mouse.parentFemale == nil){
                 
@@ -256,66 +247,5 @@
     [self.navigationController pushViewController:showmouse animated:YES];
     
 }
-
-
-
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//   
-//    
-//    ShowMouseViewController *controller = (ShowMouseViewController *) segue.destinationViewController;
-//    controller.mouse = sender;
-//}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

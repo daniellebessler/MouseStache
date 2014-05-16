@@ -55,13 +55,14 @@
 
 - (void)loadMice {
     NSString *path = [self dataFilePath];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]){
         NSData *data = [[NSData alloc] initWithContentsOfFile:path]; NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc]
                                                                                                       initForReadingWithData:data];
         self.items = [unarchiver decodeObjectForKey:@"MouseStache"];
         [unarchiver finishDecoding];
-    } else {
-            self.items = [[NSMutableArray alloc] initWithCapacity:20]; }
+    }else{
+            self.items = [[NSMutableArray alloc] initWithCapacity:20];
+    }
 }
 
 -(void)sortMice

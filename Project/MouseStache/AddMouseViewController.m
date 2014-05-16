@@ -49,14 +49,11 @@
     
     if (self.editMouse) {
         self.title = @"Edit Item";
-        
         self.tempName = self.mouse.name;
-       
         self.doneBarButton.enabled = YES;
         
         _originalDad = self.mouse.parentMale;
         _originalMom = self.mouse.parentFemale;
-        
         
     }
     else {
@@ -103,30 +100,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    //UITextField *field = (UITextField *)[self.tableView viewWithTag:2990];
-    //[field becomeFirstResponder];
-    
-    
-//    UIView *footerContainer = [[UIView alloc]initWithFrame:CGRectMake(10, 10, 150, 50)];
-//    UIButton *btnFooter = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    [btnFooter setTitle:@"Delete Mouse" forState:UIControlStateNormal];
-//    [btnFooter.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
-//    [btnFooter setFrame:CGRectMake(10, 10, 150, 50)];
-//    [btnFooter setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-//    
-//    [footerContainer addSubview:btnFooter];
-//    
-//    
-//    self.tableView.tableFooterView = footerContainer;
-//    
-//    [btnFooter addTarget:self action:@selector(deleteButtonHit:)forControlEvents:UIControlEventTouchUpInside];
-//
-//    [self.tableView reloadData];
-//    
-//   }
-//-(void)deleteButtonHit:(id)sender
-//{
-//    [self.mice.items ]
+
 }
 
 
@@ -149,38 +123,36 @@
         UITextField *field = (UITextField *)[self.tableView viewWithTag:2990];
         self.mouse.name = field.text;
 
-        if (_originalMom != self.mouse.parentFemale )
-        {
+        if (_originalMom != self.mouse.parentFemale ){
             
             [_originalMom.children removeObjectIdenticalTo:self.mouse];
             Mouse *mom = self.mouse.parentFemale;
             [mom.children addObject:self.mouse];
-            //changed = YES;
+            
         }
         
-        
-        if (_originalDad != self.mouse.parentMale)
-        {
+        if (_originalDad != self.mouse.parentMale){
+            
             [_originalDad.children removeObjectIdenticalTo:self.mouse];
             Mouse *dad = self.mouse.parentMale;
             [dad.children addObject:self.mouse];
-            //changed = YES;
+            
         }
         
         
-            [self.delegate AddMouseViewController:self didFinishEditingItem:self.mouse];
+        [self.delegate AddMouseViewController:self didFinishEditingItem:self.mouse];
 
-    }else {
+    }else{
     
         UITextField *field = (UITextField *)[self.tableView viewWithTag:2990];
         self.mouse.name = field.text;
+        
         Mouse *mom = self.mouse.parentFemale;
         [mom.children addObject:self.mouse];
+        
         Mouse *dad = self.mouse.parentMale;
         [dad.children addObject:self.mouse];
-       
-        
-        
+
         [self.delegate AddMouseViewController:self didFinishAddingItem:self.mouse];
         
    }
@@ -194,7 +166,7 @@
     NSString *gene = field.text;
     [self.mouse.genes addObject:gene];
     
-    //NSLog(@" gene at pos 0 %@", self.mouse.genes[0]);
+    //NSLog(@" gene at pos 0: %@", self.mouse.genes[0]);
     
     NSIndexSet *sectionIndexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(3, 1)];
     [self.tableView reloadSections:sectionIndexSet withRowAnimation:UITableViewRowAnimationFade];
@@ -213,8 +185,6 @@
     }
     
 }
-
-
 
 
 - (NSIndexPath *) tableView:(UITableView *) tableView willSelectRowAtIndexPath:(NSIndexPath *) indexPath
@@ -237,8 +207,7 @@ replacementString:(NSString *)string
         NSString *gene = [theTextField.text  stringByReplacingCharactersInRange:range withString:string];
         CGPoint location = [theTextField.superview convertPoint:theTextField.center toView:self.tableView];
         NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
-//        NSIndexPath* path = [NSIndexPath indexPathForRow:[self.mouse.genes count] inSection:3];
-//
+
         if(indexPath.row == [self.mouse.genes count]){
             if([gene length]>0){
             UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
@@ -277,12 +246,11 @@ replacementString:(NSString *)string
     if (indexPath.section == 3){
         cell = [tableView dequeueReusableCellWithIdentifier:@"gene"];
         
+        UITextField *field = (UITextField *)[cell viewWithTag:3010];
+        UIButton *addGene = (UIButton *)[cell viewWithTag:3020];
         
-       UITextField *field = (UITextField *)[cell viewWithTag:3010];
-       UIButton *addGene = (UIButton *)[cell viewWithTag:3020];
-        
-        if (indexPath.row==[self.mouse.genes count]) {
-
+        if (indexPath.row==[self.mouse.genes count]){
+            
             addGene.userInteractionEnabled = NO;
             field.placeholder = @"Enter new gene here";
             
@@ -297,65 +265,39 @@ replacementString:(NSString *)string
         
         cell = [tableView dequeueReusableCellWithIdentifier:@"mom"];
         
-            if (self.mouse.parentFemale != nil)
-            {
-                
-           
+        if (self.mouse.parentFemale != nil){
+            
             UILabel *label = (UILabel *)[cell viewWithTag:2999];
             label.textColor = [UIColor blackColor];
             label.text = self.mouse.parentFemale.name;
-            
-            
-            //UIImageView *image = (UIImageView *) [cell viewWithTag:10];
-            //image.image = [UIImage imageNamed:@"Female"];
-            }
-            else {
+        
+            }else {
                 UILabel *label = (UILabel *)[cell viewWithTag:2999];
                 label.textColor = [UIColor grayColor];
                 label.text = @"Mother";
             }
-            
-
-    }
-    else if(indexPath.section == 2) {
+    }else if(indexPath.section == 2) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"dad"];
             
-            if (self.mouse.parentMale != nil)
-            {
+        if (self.mouse.parentMale != nil){
                 
                 UILabel *label = (UILabel *)[cell viewWithTag:3000];
                 label.textColor = [UIColor blackColor];
                 label.text = self.mouse.parentMale.name;
-                
-                
-                // UIImageView *image = (UIImageView *) [cell viewWithTag:10];
-                // image.image = [UIImage imageNamed:@"Male"];
-                
-            }
-            else {
+            
+            }else {
                 UILabel *label = (UILabel *)[cell viewWithTag:3000];
                 label.textColor = [UIColor grayColor];
                 label.text = @"Father";
             }
-    }
-    
-        
-    
-//    else if (indexPath.section == 3)
-//    {
-//        cell = [tableView dequeueReusableCellWithIdentifier:@"addMate"];
-//        
- //   }
-        else {
+    }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"name"];
-            UITextField *field = (UITextField *)[cell viewWithTag:2990];
-            field.delegate = self;
-            field.userInteractionEnabled = YES;
-            [field becomeFirstResponder];
+        UITextField *field = (UITextField *)[cell viewWithTag:2990];
+        field.delegate = self;
+        field.userInteractionEnabled = YES;
+        [field becomeFirstResponder];
         
         if (self.mouse.name != nil){
-            
-            
             
             field.text = self.tempName;
             UISegmentedControl *seg = (UISegmentedControl *)[cell viewWithTag:10];
@@ -365,10 +307,8 @@ replacementString:(NSString *)string
             if (!self.mouse.female) {
                 [seg setSelectedSegmentIndex:1];
             }
-            
-
         }
-            }
+    }
   
     return cell;
 }
@@ -377,48 +317,23 @@ replacementString:(NSString *)string
 {
     
     
-    if ([segue.identifier isEqualToString:@"addMom"]) {
-        
-            
+    if ([segue.identifier isEqualToString:@"addMom"]){
        
         AddRelationViewController *controller = (AddRelationViewController *) segue.destinationViewController;
-        
         _addedRelation = @"mom";
-    
-        //self.mouse.parentFemale = [[Mouse alloc] init];
         controller.delegate = self;
         controller.mice = self.mice;
         controller.addedRelation = @"mom";
         
-        
-    }
-    
-    else if([segue.identifier isEqualToString:@"addDad"]) {
-        
-        
+    }else if([segue.identifier isEqualToString:@"addDad"]){
         
         AddRelationViewController *controller = (AddRelationViewController *) segue.destinationViewController;
-        
         _addedRelation = @"dad";
-       
         controller.delegate = self;
         controller.mice = self.mice;
         controller.addedRelation = @"dad";
-        
-        
-
-        
+  
     }
-    if ([segue.identifier isEqualToString:@"addMate"]) {
-        AddRelationViewController *controller = (AddRelationViewController *) segue.destinationViewController;
-        
-        _addedRelation = @"mate";
-        
-        
-        controller.delegate = self;
-        controller.mice = self.mice;
-    }
-    
     
 }
 
@@ -430,37 +345,19 @@ replacementString:(NSString *)string
 
 - (void)AddRelationViewController:(AddRelationViewController *) controller didFinishChoosingItem:(Mouse *)item
 {
-    
-    
 
-        if ([_addedRelation isEqualToString:@"mom"])
-        {
+    if ([_addedRelation isEqualToString:@"mom"]){
             
-            self.mouse.parentFemale = item;
-            //self.motherLabel.text = item.name;
-        }
-    
-        if ([_addedRelation isEqualToString:@"dad"])
-        {
-           self.mouse.parentMale = item;
-           //self.fatherLabel.text = item.name;
-        }
-    if ([_addedRelation isEqualToString:@"mate"])
-    {
-        [self.mouse.mates addObject:item];
-        
-        //self.fatherLabel.text = item.name;
+        self.mouse.parentFemale = item;
+            
+    }else if ([_addedRelation isEqualToString:@"dad"]){
+            
+        self.mouse.parentMale = item;
+           
     }
     
     [self.tableView reloadData];
-   
 
-    
-    
-
-
-   
-    
 }
 
 

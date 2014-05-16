@@ -221,8 +221,6 @@ replacementString:(NSString *)string
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([cages count]!= indexPath.row){
-        //UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        //cell.userInteractionEnabled = YES;
         Cage *cage = cages[indexPath.row];
         [self performSegueWithIdentifier:@"ShowCage" sender:cage];
     }

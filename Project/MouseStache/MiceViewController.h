@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "AddMouseViewController.h"
 
+
 @class AllMice;
-
-
 
 
 @interface MiceViewController : UITableViewController <AddMouseViewControllerDelegate, UINavigationControllerDelegate, UISearchBarDelegate, UISearchDisplayDelegate>

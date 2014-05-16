@@ -21,24 +21,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-//    self.tabBarController = [[UITabBarController alloc] init];
-//    
-//    ShowCageViewController *cageVC = [[ShowCageViewController alloc] init];
-//    
-//    MiceViewController *miceVC = [[MiceViewController alloc] init];
-//    
-//    UINavigationController *miceNav = [[UINavigationController alloc] initWithRootViewController:miceVC];
-//    
-//    NSArray* controllers = [NSArray arrayWithObjects:cageVC, miceNav, nil, nil, nil];
-//    self.tabBarController.viewControllers = controllers;
-//    
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    self.window.rootViewController = self.tabBarController;
-//    [self.window makeKeyAndVisible];
-//
-    
-  
-    
     UITabBarController *tabController = (UITabBarController *)self.window.rootViewController;
     tabController.tabBar.tintColor = [UIColor colorWithRed:101.0/255.0 green:44.0/255.0 blue:144.0/255.0 alpha:1.0];
     UINavigationController *navMice = tabController.viewControllers[0];

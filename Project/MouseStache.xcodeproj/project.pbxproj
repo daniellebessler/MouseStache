@@ -179,18 +179,18 @@
 		BB61F94518EB5B360088E121 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB61F92E18EB4E000088E121 /* MiceViewController.h */,
+				BB61F92F18EB4E000088E121 /* MiceViewController.m */,
+				BB61F93618EB4E000088E121 /* ShowMouseViewController.h */,
+				BB61F93718EB4E000088E121 /* ShowMouseViewController.m */,
 				BB61F92118EB4E000088E121 /* AddMouseViewController.h */,
 				BB61F92218EB4E000088E121 /* AddMouseViewController.m */,
 				BB61F92318EB4E000088E121 /* AddRelationViewController.h */,
 				BB61F92418EB4E000088E121 /* AddRelationViewController.m */,
 				BB61F92C18EB4E000088E121 /* CagesViewController.h */,
 				BB61F92D18EB4E000088E121 /* CagesViewController.m */,
-				BB61F92E18EB4E000088E121 /* MiceViewController.h */,
-				BB61F92F18EB4E000088E121 /* MiceViewController.m */,
 				BB61F93418EB4E000088E121 /* ShowCageViewController.h */,
 				BB61F93518EB4E000088E121 /* ShowCageViewController.m */,
-				BB61F93618EB4E000088E121 /* ShowMouseViewController.h */,
-				BB61F93718EB4E000088E121 /* ShowMouseViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

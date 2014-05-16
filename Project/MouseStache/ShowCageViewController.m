@@ -10,6 +10,7 @@
 #import "AllMice.h"
 #import "Mouse.h"
 #import "Cage.h"
+#import "ShowMouseViewController.h"
 
 @interface ShowCageViewController ()
 
@@ -47,7 +48,6 @@
 {
     
     _myMice = [[NSMutableArray alloc] init];
-    //_miceNum = 0;
     
     int i=0;
     
@@ -58,7 +58,6 @@
         
         if (self.cage == mouse.cage) {
             [_myMice addObject:mouse];
-            //_miceNum ++;
         }
         
         i++;
@@ -66,11 +65,8 @@
 
 }
 
-#pragma mark - Table view data source
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //return _miceNum;
     return [_myMice count];
 }
 
@@ -89,8 +85,19 @@
         cell.imageView.image = [UIImage imageNamed:@"Male.png"];
     }
 
-    cell.userInteractionEnabled = NO;
+    cell.userInteractionEnabled = YES;
     return cell;
+
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Mouse *mouse = _myMice[indexPath.row];
+    
+    ShowMouseViewController *showmouse = (ShowMouseViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"ShowMouse"];
+    showmouse.mouse = mouse;
+    showmouse.title = mouse.name;
+    [self.navigationController pushViewController:showmouse animated:YES];
+
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
